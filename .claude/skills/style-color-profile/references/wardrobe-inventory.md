@@ -43,11 +43,18 @@ correct any that are off._
   Square neck flatters the bust; ribbed knit skims. Reads a touch dressier than
   T3 and long enough to tuck into a skirt. Warm neutral. _(Possibly the same
   piece as T3 in a different styling — confirm if you want them merged.)_
-- **T8 — White ruffle-sleeve blouse (floral-trim detail).** _Seen folded in a
-  flat-lay, not worn — details tentative._ Soft white; keep ruffle volume off the
-  bustline and toward the sleeve so it flatters. Warm-weather / dressy-casual.
+- **T8 — White short-sleeve peplum/babydoll top (tie-front, ruffled flared
+  hem).** _Confirmed worn._ Soft, flowy white; the tie-front V flatters the bust
+  and the peplum flare adds lower-body volume that balances her shoulders — a
+  genuinely flattering cut for her. Warm-weather / dressy-casual.
 - **T9 — White gathered/crinkle-cotton top.** _Flat-lay, tentative._ Casual warm-
-  weather layer; confirm neckline/cut and I'll refine.
+  weather layer; confirm neckline/cut and I'll refine. (May be the same piece as
+  T8 — confirm.)
+- **T10 — White classic crewneck short-sleeve tee.** Everyday staple; clean,
+  versatile, tucks into anything. Core neutral, year-round basic.
+- **T11 — Black fitted cropped tank (thin/halter straps).** _Possibly the same
+  as T1 — confirm._ Skims the frame, defines the waist when cropped at a high
+  rise. Core neutral, warm-weather base.
 
 ### Outerwear
 
@@ -76,10 +83,18 @@ correct any that are off._
   and long — very flattering: the bias skim + slit lengthens the leg and the
   slit adds movement. Core neutral; takes her from dressy-casual to going-out.
   A high-value versatile piece.
-- **B6 — Camel/cognac tailored high-waist pleated shorts (belted).** _Flat-lay,
-  tentative on exact cut._ High waist defines the middle; camel is a favorite
-  warm neutral and elevates denim-short territory into something more polished.
-  Warm-weather smart-casual.
+- **B6 — Camel/cognac tailored high-waist pleated shorts (belted).** _Confirmed
+  worn._ High waist defines the middle; camel is a favorite warm neutral and
+  elevates denim-short territory into something more polished. Reads great with a
+  fitted black tank. Warm-weather smart-casual.
+- **B7 — White linen wide-leg trousers (relaxed).** Airy, drapey, full-length —
+  the wide leg balances her shoulders and the length suits her height; linen
+  keeps it easy-casual. Watch opacity (pair with a longer or darker top / good
+  underlayer). Warm-weather, leans coastal-classic. _(Distinct from B4's crisper
+  white straight trousers.)_
+- **B8 — Light-wash blue slim/straight jeans.** Everyday denim in a lighter wash;
+  clean slim-straight line. Casual, year-round. Pairs with tees, sneakers, and
+  flowier tops.
 
 ### Dresses
 
@@ -87,10 +102,20 @@ correct any that are off._
   Scoop neck + narrow straps flatter the bust and shoulders; the long fitted
   column shows the lean frame and suits her height. Core neutral, an easy
   summer going-out piece that dresses up or down.
+- **D2 — Black fitted sleeveless mini dress (bodycon).** Short, body-skimming;
+  shows off the lean legs and frame. Best for going-out. Balance the bare, fitted
+  shape with a chunkier boot (as worn) so the proportion feels grounded. Core
+  neutral.
 
 ### Shoes
 
 - **S1 — White sneakers.** Casual anchor; pairs with almost everything.
+- **S5 — Black chunky lug-sole ankle boots (Chelsea/combat style).** Grounds and
+  toughens up dresses and minis; the weight balances a bare fitted silhouette.
+  Fall/winter and going-out.
+- **S6 — White low-top sneakers with black side accent.** Everyday casual; clean
+  with jeans and tees. _(May overlap with S1 — confirm if they're the same
+  pair.)_
 - **S2 — Tan/brown wedge mules (heeled).** Dresses up shorts/denim for
   going-out; warm tan works with her palette.
 - **S3 — Teal / petrol-blue suede pointed ankle boots.** A cool-toned pop that
@@ -147,6 +172,17 @@ correct any that are off._
   taupe + black is quiet and elegant. Add S4 black boots or a heel to elevate.
 - **O9 — Summer going-out:** D1 black midi dress + BG3 brown suede shoulder bag
   + A1 gold necklace. Simple, leg-lengthening, warm-brown accent.
+- **O10 — Going out (evening):** D2 black mini dress + S5 black lug boots. Fitted
+  + chunky-boot contrast; sleek and grounded.
+- **O11 — Summer casual:** black cropped tank (T11/T1) + B7 white linen wide-leg.
+  Fitted top + wide leg = her ideal proportion; crisp black-and-white.
+- **O12 — Casual:** T8 white peplum tie-front top + B8 light-wash jeans + white
+  sneakers (S6). Soft flattering top over easy denim.
+- **O13 — Everyday basic:** T10 white tee + B8 light-wash jeans + white sneakers
+  (S6). Clean, classic, effortless.
+- **O14 — Summer smart-casual:** black fitted tank (T11/T1) + B6 camel pleated
+  shorts. High-waist shorts define the waist; black + camel is a crisp,
+  elevated warm-weather pairing.
 
 ## Observations & gaps (for wardrobe building)
 
@@ -154,13 +190,16 @@ correct any that are off._
   midi dress, ribbed sweater, coat, scarves, boots) — strong across seasons.
 - **Bags and shoes are a real strength** (brown suede tote, oxblood Goyard, suede
   shoulder bag; teal + black boots, wedges, sneakers) — plenty to finish outfits.
-- Still lightest on **work-appropriate bottoms and a structured layer** (a blazer
-  is the standout gap) — the highest-leverage additions for rounding out the
-  professional end per the capsule plan. B4 white trousers + a blazer would open
-  up a lot of workwear.
+- **Casual basics are now well covered** — white tee, black tanks, light-wash
+  jeans, white sneakers, linen wide-legs, camel shorts give a deep everyday mix.
+- Still lightest on **work-appropriate pieces and a structured layer**: a
+  **blazer is the standout gap**, plus tailored work trousers and a crisp
+  button-down. That's the single highest-leverage area to build out the
+  professional end per the capsule plan.
 - Palette is warm-neutral-forward (black, brown, taupe, cream, rust, camel) with
-  good cool anchors now entering (white trousers, grey scarf, oxblood, teal) —
-  well balanced; a navy piece or crisp button-down would complete the cool-
-  classic side.
-- A few pieces are logged from flat-lays and need confirmation (T7 vs T3, T8,
-  T9, B6) — verify cut/color when convenient.
+  good cool anchors (white trousers/jeans, grey scarf, oxblood, teal) — well
+  balanced; a **navy piece or crisp button-down** would complete the cool-classic
+  side.
+- Open confirmations: T7 vs T3 (taupe tanks), T9 vs T8 (white tops), T11 vs T1
+  (black tanks), and S6 vs S1 (white sneakers) may be duplicates — merge when
+  you confirm.
