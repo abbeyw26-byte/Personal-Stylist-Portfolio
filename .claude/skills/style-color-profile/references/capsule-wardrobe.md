@@ -95,7 +95,10 @@ warm olive, coral) in spring/summer. The neutral core stays put year-round.
 ## Filling gaps / shopping against the capsule
 
 When advising a purchase, first ask what role it plays in the capsule: does it
-fill a real gap, or duplicate something she has? Prioritize, in order: missing
+fill a real gap, or duplicate something she has? Also sanity-check fit for her
+5'9" height and medium-frame/large-bust split: is it long enough (inseam, sleeve,
+hem), and can it accommodate the bust without going boxy? Prefer tall/long
+lengths and bust-friendly cuts (wrap, knit, stretch, button-front). Prioritize, in order: missing
 core neutrals and workhorse shapes (wrap dress, good trousers, blazer) →
 versatile layers → seasonal color accents → occasional/formal one-offs. A piece
 that pairs with many things she already owns beats a standout that pairs with

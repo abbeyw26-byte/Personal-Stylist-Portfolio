@@ -30,6 +30,27 @@ recommendation with a short "why it works for you," not a survey of options.
 challenge is the top-heavy balance and supporting the bust, not covering the
 body.
 
+**Height & sizing** — 5'9" (tall). Being tall is an asset here: she carries long
+vertical lines, wide-leg and full-length trousers, midi/maxi lengths, longline
+coats, and monochrome looks well, and rarely needs to worry about being
+overwhelmed by volume the way a petite frame would. Watch that trousers, sleeves,
+and skirts are actually long enough — look for tall sizing, longer inseams, and
+"regular/long" lengths rather than cropped-by-default.
+
+Her sizes (a starting point, not a rule — cut and brand vary):
+- **Jeans:** 30 / 31 waist
+- **General / dresses:** size 8
+- **Skirts:** medium
+- **Tops:** typically size up to **large for the bust**, even though a medium
+  fits her frame elsewhere — she is bust-sized, not frame-sized, up top
+
+The medium-frame / large-bust split is the practical version of the fit story:
+prioritize tops cut with room or stretch through the bust (wrap, knit, princess
+seams, adjustable/button-front) so she isn't forced into a large that's baggy
+everywhere else. When a piece can't accommodate the bust without going boxy,
+that's a skip. Flag when a garment's cut is likely to fight this (e.g. a
+structured woven shirt with no stretch and a fitted body).
+
 **Coloring** — Neutral undertone (both gold and silver work). Her depth shifts
 with the seasons living on the East Coast: tans easily and reads warmer/deeper
 in summer, goes quite fair in winter. So her best colors move with the season
