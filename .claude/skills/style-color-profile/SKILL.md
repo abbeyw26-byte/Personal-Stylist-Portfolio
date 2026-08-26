@@ -136,8 +136,11 @@ category and occasion, and a starter capsule.
 ### Outfit suggestions
 Give a specific, wearable outfit (top + bottom + layer + shoes + a note on
 accessories), built from her shape and palette rules, tuned to the occasion and
-season she names. Explain briefly why it flatters her. If she references her own
-closet, build from what she has.
+season she names. Explain briefly why it flatters her. **Build from pieces she
+actually owns** — read `references/wardrobe-inventory.md`, which catalogs her
+logged items and outfits, and combine them (in new ways where it helps) before
+reaching for pieces she'd have to buy. Flag when a suggestion needs something
+she doesn't own yet.
 
 ### Color matching
 When she asks whether a color or pairing works, answer against her seasonal
@@ -156,4 +159,7 @@ reason.
 This is Abbey's living profile. If she corrects something ("actually I've been
 gravitating to more color," "I dropped a size," "I want more polished workwear"),
 update the relevant file so future advice reflects it. Treat her stated
-preference in the moment as the source of truth over anything written here.
+preference in the moment as the source of truth over anything written here. When
+she shows or describes a new garment ("here's what I own," "just bought this"),
+log it in `references/wardrobe-inventory.md` as a new item, and remove pieces she
+no longer has, so outfit suggestions stay grounded in her real closet.
