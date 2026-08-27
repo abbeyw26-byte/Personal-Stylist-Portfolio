@@ -55,6 +55,19 @@ correct any that are off._
 - **T11 — Black fitted cropped tank (thin/halter straps).** _Possibly the same
   as T1 — confirm._ Skims the frame, defines the waist when cropped at a high
   rise. Core neutral, warm-weather base.
+- **T12 — Dark brown/espresso sleeveless muscle tank (relaxed/boxy).** Easy warm-
+  neutral layer; keep it semi-tucked so the boxy cut doesn't add bulk up top.
+  Warm-weather casual.
+- **T13 — Cream/ivory linen tie-front short-sleeve top (soft puff sleeve, tie
+  waist).** The tie at the waist defines the middle and the V-ish front flatters
+  the bust; linen keeps it breezy. Warm neutral, elevated-casual — reads
+  coastal-classic. A flattering cut for her.
+- **T14 — White draped halter / twist-front sleeveless top.** Halter narrows the
+  shoulder line (good for her broad shoulders) and the drape skims the bust.
+  Core neutral, summer going-out.
+- **T15 — White ribbed tank with small navy "Brunson Egg & Cheese" text.** Fitted
+  rib that flatters; the tiny deli-style text is playful, not a big brand logo,
+  so it stays on the right side of her "no loud logos" line. Casual, warm-weather.
 
 ### Outerwear
 
@@ -95,6 +108,12 @@ correct any that are off._
 - **B8 — Light-wash blue slim/straight jeans.** Everyday denim in a lighter wash;
   clean slim-straight line. Casual, year-round. Pairs with tees, sneakers, and
   flowier tops.
+- **B9 — Cognac/brown tailored wide-leg trousers.** Elevated warm-neutral
+  trouser; wide leg balances the shoulders and the length suits her height. Takes
+  her toward smart-casual and edges into workwear. A high-value piece.
+- **B10 — Black tailored wide-leg trousers.** Versatile core bottom; the wide
+  leg + a fitted top is her ideal proportion, and these read polished enough for
+  work or going-out. Year-round workhorse.
 
 ### Dresses
 
@@ -116,6 +135,11 @@ correct any that are off._
 - **S6 — White low-top sneakers with black side accent.** Everyday casual; clean
   with jeans and tees. _(May overlap with S1 — confirm if they're the same
   pair.)_
+- **S7 — Gold/metallic pointed flats (kitten-heel).** Dresses up shorts and
+  denim for evening; the pointed toe lengthens the leg and gold plays to her
+  warm side. Going-out.
+- **S8 — Silver/metallic low sneakers.** A cool-toned metallic that adds a subtle
+  pop to casual looks; keeps sneakers-with-trousers feeling intentional. Casual.
 - **S2 — Tan/brown wedge mules (heeled).** Dresses up shorts/denim for
   going-out; warm tan works with her palette.
 - **S3 — Teal / petrol-blue suede pointed ankle boots.** A cool-toned pop that
@@ -132,6 +156,10 @@ correct any that are off._
   classic rather than loud, so it fits her "no loud logos" line.
 - **BG3 — Brown suede shoulder bag (slouchy).** Casual warm-neutral everyday
   bag; good with summer looks.
+- **BG4 — Black boxy crossbody bag (small, structured).** Sleek, hands-free, goes
+  with everything; a clean cool-neutral finisher for casual and going-out.
+- **BG5 — Black sling / crossbody backpack.** Practical everyday commuter bag;
+  sporty-casual.
 
 ### Accessories
 
@@ -183,6 +211,19 @@ correct any that are off._
 - **O14 — Summer smart-casual:** black fitted tank (T11/T1) + B6 camel pleated
   shorts. High-waist shorts define the waist; black + camel is a crisp,
   elevated warm-weather pairing.
+- **O15 — Summer casual (tonal):** T12 brown muscle tank + cream wide-leg
+  trousers (B4). Relaxed brown-on-cream; keep the tank semi-tucked.
+- **O16 — Smart-casual:** T13 cream linen tie-front top + B9 cognac wide-leg
+  trousers. Tie-waist defines the middle; warm cream + cognac is elevated and
+  seasonless-leaning-fall. One of her most polished non-work looks.
+- **O17 — Summer going-out:** T14 white halter + B3 denim cutoffs + S7 gold
+  flats + BG4 black crossbody. Halter + shorts + a metallic shoe = easy evening.
+- **O18 — Casual:** T15 white graphic ribbed tank + B10 black wide-leg trousers
+  + S8 silver sneakers + BG4 black crossbody + layered gold necklaces. Fitted
+  tank + wide-leg is her ideal proportion; crisp black-and-white with metallic.
+- **O19 — Casual:** T10 white tee (knotted at waist) + B10 black wide-leg
+  trousers + S4 black pointed boots + BG5 black sling backpack. The knot defines
+  the waist; sharp monochrome.
 
 ## Observations & gaps (for wardrobe building)
 
@@ -192,10 +233,11 @@ correct any that are off._
   shoulder bag; teal + black boots, wedges, sneakers) — plenty to finish outfits.
 - **Casual basics are now well covered** — white tee, black tanks, light-wash
   jeans, white sneakers, linen wide-legs, camel shorts give a deep everyday mix.
-- Still lightest on **work-appropriate pieces and a structured layer**: a
-  **blazer is the standout gap**, plus tailored work trousers and a crisp
-  button-down. That's the single highest-leverage area to build out the
-  professional end per the capsule plan.
+- **Tailored trousers are now covered** (cognac B9, black B10, plus cream/white
+  wide-legs) — the workwear base is landing. The **blazer is now clearly the
+  single standout gap**: with B10 black trousers + a fitted top already in hand,
+  one good blazer instantly creates several polished work outfits. A crisp
+  button-down is the next add.
 - Palette is warm-neutral-forward (black, brown, taupe, cream, rust, camel) with
   good cool anchors (white trousers/jeans, grey scarf, oxblood, teal) — well
   balanced; a **navy piece or crisp button-down** would complete the cool-classic
