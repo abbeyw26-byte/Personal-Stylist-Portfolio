@@ -68,6 +68,10 @@ correct any that are off._
 - **T15 — White ribbed tank with small navy "Brunson Egg & Cheese" text.** Fitted
   rib that flatters; the tiny deli-style text is playful, not a big brand logo,
   so it stays on the right side of her "no loud logos" line. Casual, warm-weather.
+- **T16 — Brown strapless sweetheart bustier/corset top (structured).** The
+  sweetheart neckline flatters and supports a fuller bust and the boning defines
+  the waist — a genuinely well-suited going-out cut for her. Warm brown, an
+  evening statement top.
 
 ### Outerwear
 
@@ -75,6 +79,11 @@ correct any that are off._
   pockets).** Big cozy winter coat; the length works on her 5'9" and the vertical
   drop is flattering. Because it's voluminous, keep what's underneath fitted so
   the frame still reads. Warm neutral, deep-winter.
+- **OW2 — Oatmeal/beige waterfall drape cardigan (chunky collar, open front).**
+  The open cascading front makes a long vertical line — flattering and softening
+  over a fitted layer; warm neutral. A cozy fall/transitional layer, and a soft
+  alternative to a blazer for casual days (though not a substitute for tailoring
+  at work).
 
 ### Bottoms
 
@@ -114,6 +123,18 @@ correct any that are off._
 - **B10 — Black tailored wide-leg trousers.** Versatile core bottom; the wide
   leg + a fitted top is her ideal proportion, and these read polished enough for
   work or going-out. Year-round workhorse.
+- **B11 — White/cream high-waist flare jeans.** Flares are excellent on her —
+  the leg volume balances her shoulders and lengthens her already-tall frame;
+  high waist defines the middle. Warm-weather / seasonless-light.
+- **B12 — Dark-wash indigo bootcut/flare jeans.** Rich dark denim in a flattering
+  flared leg; dresses up or down and works into fall/winter. A high-value denim.
+- **B13 — Mustard/chartreuse wide-leg corduroy trousers.** Her pop-of-color
+  bottom — mustard/ochre is an autumn tone that suits her; wide-leg cord balances
+  the shoulders. Best worn with a simple neutral top (as with a black tank) so the
+  color leads. Fall.
+- **B14 — Cream satin bias-cut midi skirt (side movement/slit).** Cream sister to
+  B5; the bias drape skims and lengthens. Soft warm neutral — elegant and
+  versatile from dressy-casual to going-out. _(Described, not yet photographed.)_
 
 ### Dresses
 
@@ -125,6 +146,10 @@ correct any that are off._
   shows off the lean legs and frame. Best for going-out. Balance the bare, fitted
   shape with a chunkier boot (as worn) so the proportion feels grounded. Core
   neutral.
+- **D3 — Cream floral-print spaghetti-strap midi sundress (yellow ribbon sash).**
+  Straps flatter the shoulder line and the tie sash defines the waist; the midi
+  length suits her height. Soft, romantic, summery — a break from her neutrals
+  into gentle print. Warm-weather casual-to-dressy.
 
 ### Shoes
 
@@ -140,6 +165,9 @@ correct any that are off._
   warm side. Going-out.
 - **S8 — Silver/metallic low sneakers.** A cool-toned metallic that adds a subtle
   pop to casual looks; keeps sneakers-with-trousers feeling intentional. Casual.
+- **S9 — Tan western/cowboy ankle boots.** Warm-neutral with a bit of character;
+  great with flares and denim, and leans into her classic-casual side. Fall and
+  transitional.
 - **S2 — Tan/brown wedge mules (heeled).** Dresses up shorts/denim for
   going-out; warm tan works with her palette.
 - **S3 — Teal / petrol-blue suede pointed ankle boots.** A cool-toned pop that
@@ -224,6 +252,19 @@ correct any that are off._
 - **O19 — Casual:** T10 white tee (knotted at waist) + B10 black wide-leg
   trousers + S4 black pointed boots + BG5 black sling backpack. The knot defines
   the waist; sharp monochrome.
+- **O20 — Going out (evening):** T16 brown bustier + B11 white/cream flare jeans.
+  Structured bust-flattering top + leg-lengthening flare; warm and striking.
+- **O21 — Fall casual:** OW2 oatmeal drape cardigan + brown top (T6) + B12 dark
+  flare jeans + S4 black boots. Long open cardigan over fitted layer; tonal warm
+  neutrals with dark denim.
+- **O22 — Smart-casual:** T14 white halter + B12 dark flare jeans + BG2 oxblood
+  Goyard tote + S9 tan western boots. Halter + flare is a flattering, put-together
+  denim look with western edge.
+- **O23 — Fall (color):** T5 black square-neck tank + B13 mustard corduroy
+  wide-leg + S4 black boots. Simple black top lets the mustard lead; waist-defining
+  and shoulder-balancing.
+- **O24 — Summer:** D3 cream floral sundress with yellow sash. Straps + tie waist
+  + midi length — effortless warm-weather.
 
 ## Observations & gaps (for wardrobe building)
 
@@ -233,6 +274,9 @@ correct any that are off._
   shoulder bag; teal + black boots, wedges, sneakers) — plenty to finish outfits.
 - **Casual basics are now well covered** — white tee, black tanks, light-wash
   jeans, white sneakers, linen wide-legs, camel shorts give a deep everyday mix.
+- **Denim and skirts are a strength** — light/dark slim, white and dark flares,
+  cutoffs, plus black and cream satin midi skirts cover most bottom needs. Flares
+  are especially flattering on her, so lean on them.
 - **Tailored trousers are now covered** (cognac B9, black B10, plus cream/white
   wide-legs) — the workwear base is landing. The **blazer is now clearly the
   single standout gap**: with B10 black trousers + a fitted top already in hand,
