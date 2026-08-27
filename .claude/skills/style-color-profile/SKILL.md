@@ -162,4 +162,12 @@ update the relevant file so future advice reflects it. Treat her stated
 preference in the moment as the source of truth over anything written here. When
 she shows or describes a new garment ("here's what I own," "just bought this"),
 log it in `references/wardrobe-inventory.md` as a new item, and remove pieces she
-no longer has, so outfit suggestions stay grounded in her real closet.
+no longer has, so outfit suggestions stay grounded in her real closet. Watch for
+duplicates when logging photos (the same piece shot twice) and merge them rather
+than creating parallel entries.
+
+The inventory also keeps a **"Still to send (pending items)"** checklist of
+pieces she owns but hasn't photographed yet. When she names something she hasn't
+sent, add it there; when she asks **"what still needs to be sent?"** (or similar),
+read that list back to her; and move an item off the list into the catalog once
+she sends it.

@@ -17,17 +17,20 @@ correct any that are off._
 
 ### Tops
 
-- **T1 — Black sleeveless tank (fitted knit, racer/side-cut armhole).**
-  Body-skimming, scoop-ish neck. Great fit for her: shows the lean frame,
-  narrow shoulder line, supports a tucked/high-waist pairing. Core neutral,
-  year-round. Very versatile base.
+- **T1 — Black delicate thin-strap fitted tank (fine knit).** The confirmed
+  "delicate tank top." Body-skimming with narrow straps and a scoop-ish neck;
+  shows the lean frame and narrow shoulder line, supports a tuck/high waist. Core
+  neutral, year-round — very versatile base. _(Absorbs former T11 — same piece.
+  If she actually owns two black tanks, e.g. a racer-back and a spaghetti-strap,
+  split them back out.)_
 - **T2 — Espresso-brown sheer/mesh scoop-neck cami (thin straps).**
   Going-out piece; scoop neck + narrow straps flatter bust and shoulders.
   Warm brown sits squarely in her palette. Needs the right bra/layer given
   sheerness. Best spring/summer or layered.
-- **T3 — Taupe/beige ribbed sleeveless crop (fitted, square/scoop neck).**
-  Ribbed knit skims and stretches over the bust (a bust-friendly cut), defines
-  the waist when cropped at the high rise. Warm neutral, year-round base.
+- **T3 — Taupe/beige ribbed square/scoop-neck tank (fitted).** Ribbed knit skims
+  and stretches over the bust (a bust-friendly cut), defines the waist; long
+  enough to tuck into a skirt or wear cropped at the high rise. Warm neutral,
+  year-round base. _(Absorbs former T7 — same piece.)_
 - **T4 — Rust/maroon tie-front cropped blouse (long full sleeves, deep-V open
   front with tie).** Deep V + vertical tie is very flattering for the bust and
   elongates; balloon sleeve adds soft interest without widening the shoulder.
@@ -39,22 +42,17 @@ correct any that are off._
 - **T6 — Espresso-brown ribbed knit long-sleeve sweater.** Fitted-through-body
   rib that skims and stretches over the bust; slim sleeves keep the shoulder
   clean. Warm neutral, a fall/winter workhorse. Tucks or layers well.
-- **T7 — Taupe/mushroom ribbed square-neck tank (fitted, longer than T3).**
-  Square neck flatters the bust; ribbed knit skims. Reads a touch dressier than
-  T3 and long enough to tuck into a skirt. Warm neutral. _(Possibly the same
-  piece as T3 in a different styling — confirm if you want them merged.)_
+- **T7 — _(merged into T3 — retired)._**
 - **T8 — White short-sleeve peplum/babydoll top (tie-front, ruffled flared
   hem).** _Confirmed worn._ Soft, flowy white; the tie-front V flatters the bust
   and the peplum flare adds lower-body volume that balances her shoulders — a
   genuinely flattering cut for her. Warm-weather / dressy-casual.
-- **T9 — White gathered/crinkle-cotton top.** _Flat-lay, tentative._ Casual warm-
-  weather layer; confirm neckline/cut and I'll refine. (May be the same piece as
-  T8 — confirm.)
+- **T9 — _(unconfirmed placeholder — retired.)_** A possible second white top was
+  glimpsed in a flat-lay but never seen clearly; if she owns a white top distinct
+  from T8, it's on the "still to send" list below.
 - **T10 — White classic crewneck short-sleeve tee.** Everyday staple; clean,
   versatile, tucks into anything. Core neutral, year-round basic.
-- **T11 — Black fitted cropped tank (thin/halter straps).** _Possibly the same
-  as T1 — confirm._ Skims the frame, defines the waist when cropped at a high
-  rise. Core neutral, warm-weather base.
+- **T11 — _(merged into T1 — retired)._**
 - **T12 — Dark brown/espresso sleeveless muscle tank (relaxed/boxy).** Easy warm-
   neutral layer; keep it semi-tucked so the boxy cut doesn't add bulk up top.
   Warm-weather casual.
@@ -153,13 +151,12 @@ correct any that are off._
 
 ### Shoes
 
-- **S1 — White sneakers.** Casual anchor; pairs with almost everything.
+- **S1 — White low-top sneakers (black side accent).** Casual anchor; pairs with
+  almost everything. _(Absorbs former S6 — same pair.)_
 - **S5 — Black chunky lug-sole ankle boots (Chelsea/combat style).** Grounds and
   toughens up dresses and minis; the weight balances a bare fitted silhouette.
   Fall/winter and going-out.
-- **S6 — White low-top sneakers with black side accent.** Everyday casual; clean
-  with jeans and tees. _(May overlap with S1 — confirm if they're the same
-  pair.)_
+- **S6 — _(merged into S1 — retired)._**
 - **S7 — Gold/metallic pointed flats (kitten-heel).** Dresses up shorts and
   denim for evening; the pointed toe lengthens the leg and gold plays to her
   warm side. Going-out.
@@ -223,20 +220,20 @@ correct any that are off._
 - **O7 — Fall/winter smart-casual:** T6 brown ribbed sweater + B4 white trousers
   + A4 grey scarf + S4 black boots + BG2 oxblood Goyard tote. Warm top / cool
   bottom + grey + oxblood — a rich, classic cold-weather palette.
-- **O8 — Dressy-casual:** T7 taupe ribbed tank + B5 black satin slip skirt.
+- **O8 — Dressy-casual:** T3 taupe ribbed tank + B5 black satin slip skirt.
   Fitted knit up top over a drapey bias skirt = flattering high-low proportion;
   taupe + black is quiet and elegant. Add S4 black boots or a heel to elevate.
 - **O9 — Summer going-out:** D1 black midi dress + BG3 brown suede shoulder bag
   + A1 gold necklace. Simple, leg-lengthening, warm-brown accent.
 - **O10 — Going out (evening):** D2 black mini dress + S5 black lug boots. Fitted
   + chunky-boot contrast; sleek and grounded.
-- **O11 — Summer casual:** black cropped tank (T11/T1) + B7 white linen wide-leg.
+- **O11 — Summer casual:** T1 black delicate tank + B7 white linen wide-leg.
   Fitted top + wide leg = her ideal proportion; crisp black-and-white.
-- **O12 — Casual:** T8 white peplum tie-front top + B8 light-wash jeans + white
-  sneakers (S6). Soft flattering top over easy denim.
-- **O13 — Everyday basic:** T10 white tee + B8 light-wash jeans + white sneakers
-  (S6). Clean, classic, effortless.
-- **O14 — Summer smart-casual:** black fitted tank (T11/T1) + B6 camel pleated
+- **O12 — Casual:** T8 white peplum tie-front top + B8 light-wash jeans + S1 white
+  sneakers. Soft flattering top over easy denim.
+- **O13 — Everyday basic:** T10 white tee + B8 light-wash jeans + S1 white
+  sneakers. Clean, classic, effortless.
+- **O14 — Summer smart-casual:** T1 black delicate tank + B6 camel pleated
   shorts. High-waist shorts define the waist; black + camel is a crisp,
   elevated warm-weather pairing.
 - **O15 — Summer casual (tonal):** T12 brown muscle tank + cream wide-leg
@@ -286,6 +283,23 @@ correct any that are off._
   good cool anchors (white trousers/jeans, grey scarf, oxblood, teal) — well
   balanced; a **navy piece or crisp button-down** would complete the cool-classic
   side.
-- Open confirmations: T7 vs T3 (taupe tanks), T9 vs T8 (white tops), T11 vs T1
-  (black tanks), and S6 vs S1 (white sneakers) may be duplicates — merge when
-  you confirm.
+- Duplicates reconciled: T11→T1 (delicate black tank), T7→T3 (taupe ribbed tank),
+  S6→S1 (white sneakers). Still open: whether the white/cream bottoms (B4 straight,
+  B7 linen wide-leg, B11 flare) are three pieces or fewer — confirm the count.
+
+## Still to send (pending items)
+
+This is the running checklist of pieces Abbey has said she owns but hasn't
+photographed/logged yet. When she asks "what still needs to be sent?", read this
+list back to her. Add to it whenever she mentions an item we haven't logged;
+remove a line once she sends it and it's catalogued above.
+
+- **Sweaters** — none really logged yet beyond T6 (brown ribbed) and the OW2
+  cardigan; she has more sweaters to send.
+- **The rest of her pants / jeans** — additional pairs beyond B1–B14 not yet sent.
+- **A possible second white top** — distinct from T8 (see retired T9).
+- **Other items** — she's indicated there are more categories/pieces still to
+  come; log them here as she names them.
+
+_Confirm-when-convenient:_ how many distinct white/cream bottoms she owns
+(currently logged as B4, B7, B11).
