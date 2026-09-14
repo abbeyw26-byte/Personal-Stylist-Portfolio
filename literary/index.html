@@ -1,0 +1,879 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Literary</title>
+<meta name="description" content="Design & build brief for Literary — an aesthetic reading tracker with recommendations, a trending ledger, Word of the Day, and Goodreads import.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,400&family=JetBrains+Mono:wght@400;500;600&display=swap">
+<style>
+  :root{
+    --paper:#EEE9DB;
+    --paper-2:#E6E0CE;
+    --panel:#F4F0E5;
+    --ink:#182420;
+    --ink-soft:#515C54;
+    --ink-faint:#7C8479;
+    --brass:#A2751E;
+    --brass-bright:#B98A2C;
+    --oxblood:#7C332C;
+    --green:#293C32;
+    --green-2:#33493D;
+    --line:rgba(24,36,32,.16);
+    --line-soft:rgba(24,36,32,.09);
+    --shadow:12px 16px 40px -24px rgba(24,36,32,.55);
+    --chip:rgba(162,117,30,.12);
+  }
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){
+      --paper:#12160F;
+      --paper-2:#191F16;
+      --panel:#1A211A;
+      --ink:#EBE4D2;
+      --ink-soft:#AEB4A5;
+      --ink-faint:#7E857A;
+      --brass:#CFA044;
+      --brass-bright:#DDB259;
+      --oxblood:#C97264;
+      --green:#22302A;
+      --green-2:#2C3D34;
+      --line:rgba(235,228,210,.16);
+      --line-soft:rgba(235,228,210,.09);
+      --shadow:14px 18px 46px -26px rgba(0,0,0,.75);
+      --chip:rgba(207,160,68,.15);
+    }
+  }
+  :root[data-theme="dark"]{
+    --paper:#12160F;
+    --paper-2:#191F16;
+    --panel:#1A211A;
+    --ink:#EBE4D2;
+    --ink-soft:#AEB4A5;
+    --ink-faint:#7E857A;
+    --brass:#CFA044;
+    --brass-bright:#DDB259;
+    --oxblood:#C97264;
+    --green:#22302A;
+    --green-2:#2C3D34;
+    --line:rgba(235,228,210,.16);
+    --line-soft:rgba(235,228,210,.09);
+    --shadow:14px 18px 46px -26px rgba(0,0,0,.75);
+    --chip:rgba(207,160,68,.15);
+  }
+
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Newsreader",Georgia,"Times New Roman",serif;
+    font-optical-sizing:auto;
+    font-size:18px;
+    line-height:1.62;
+    letter-spacing:.002em;
+    -webkit-font-smoothing:antialiased;
+  }
+  ::selection{background:var(--chip);color:var(--ink)}
+
+  .wrap{max-width:1080px;margin:0 auto;padding-inline:clamp(18px,5vw,56px)}
+  .col{max-width:660px}
+
+  h1,h2,h3,h4{font-family:"Fraunces",Georgia,serif;font-weight:500;line-height:1.05;text-wrap:balance;margin:0}
+  h2{font-size:clamp(1.7rem,4vw,2.6rem);letter-spacing:-.01em}
+  h3{font-size:clamp(1.25rem,2.4vw,1.6rem);letter-spacing:-.005em;line-height:1.12}
+  h4{font-size:1.06rem;line-height:1.25}
+  p{margin:0 0 1.05em}
+  a{color:inherit}
+  strong{font-weight:500;color:var(--ink)}
+  em{font-style:italic}
+  .lead{font-size:clamp(1.15rem,2.3vw,1.42rem);line-height:1.5;color:var(--ink);font-weight:300}
+
+  .eyebrow{
+    font-family:"JetBrains Mono",ui-monospace,monospace;
+    font-size:.72rem;font-weight:500;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--brass);
+  }
+  .muted{color:var(--ink-soft)}
+  .rule{height:1px;background:var(--line);border:0;margin:0}
+
+  /* ---------- Masthead ---------- */
+  .mast{padding-block:clamp(52px,9vw,104px) clamp(30px,5vw,52px)}
+  .mast .kicker{display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin-bottom:28px}
+  .seal{
+    width:34px;height:34px;border-radius:50%;flex:none;
+    border:1.5px solid var(--brass);color:var(--brass);
+    display:grid;place-items:center;font-family:"Fraunces",serif;font-size:1.05rem;font-style:italic;
+  }
+  .wordmark{
+    font-family:"Fraunces",serif;font-weight:500;
+    font-size:clamp(3.4rem,13vw,7.6rem);line-height:.92;letter-spacing:-.025em;
+    margin:.06em 0 .18em;
+  }
+  .wordmark .i-dot{color:var(--brass)}
+  .mast .tag{font-family:"Fraunces",serif;font-style:italic;font-weight:400;font-size:clamp(1.3rem,3.2vw,2rem);color:var(--ink-soft);line-height:1.2;max-width:22ch}
+  .colophon{
+    display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:34px;
+    font-family:"JetBrains Mono",monospace;font-size:.74rem;letter-spacing:.05em;color:var(--ink-faint);
+  }
+  .colophon span{white-space:nowrap}
+  .colophon b{color:var(--ink-soft);font-weight:500}
+
+  /* ---------- Nav ---------- */
+  nav.toc{
+    position:sticky;top:0;z-index:20;
+    background:color-mix(in srgb,var(--paper) 88%,transparent);
+    backdrop-filter:blur(9px);-webkit-backdrop-filter:blur(9px);
+    border-block:1px solid var(--line-soft);
+  }
+  nav.toc .wrap{display:flex;gap:4px;overflow-x:auto;padding-block:11px;scrollbar-width:none}
+  nav.toc .wrap::-webkit-scrollbar{display:none}
+  nav.toc a{
+    font-family:"JetBrains Mono",monospace;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;
+    text-decoration:none;color:var(--ink-soft);white-space:nowrap;
+    padding:6px 12px;border-radius:100px;transition:background .15s,color .15s;
+  }
+  nav.toc a:hover{background:var(--chip);color:var(--ink)}
+
+  /* ---------- Section scaffolding ---------- */
+  section{padding-block:clamp(46px,8vw,88px);border-top:1px solid var(--line-soft)}
+  .sec-head{display:flex;gap:20px;align-items:baseline;margin-bottom:26px;flex-wrap:wrap}
+  .sec-no{font-family:"JetBrains Mono",monospace;font-size:.8rem;color:var(--brass);letter-spacing:.1em;padding-top:.4em}
+  .sec-head .txt{flex:1;min-width:260px}
+  .sec-head p{margin:.5em 0 0;color:var(--ink-soft)}
+
+  /* ---------- Palette ---------- */
+  .swatches{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:12px;margin:8px 0 30px}
+  .sw{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--panel)}
+  .sw .chip{height:74px}
+  .sw .meta{padding:9px 12px 11px}
+  .sw .nm{font-size:.92rem;font-weight:500}
+  .sw .hx{font-family:"JetBrains Mono",monospace;font-size:.72rem;color:var(--ink-faint);letter-spacing:.02em}
+  .typo-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:18px}
+  .typo{border:1px solid var(--line);border-radius:14px;padding:20px 22px;background:var(--panel)}
+  .typo .role{font-family:"JetBrains Mono",monospace;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--brass);margin-bottom:12px}
+  .typo .spec{font-family:"JetBrains Mono",monospace;font-size:.74rem;color:var(--ink-faint);margin-top:12px}
+  .sample-fr{font-family:"Fraunces",serif;font-size:2rem;line-height:1;letter-spacing:-.01em}
+  .sample-nr{font-family:"Newsreader",serif;font-size:1.35rem;line-height:1.3}
+  .sample-jb{font-family:"JetBrains Mono",monospace;font-size:1.1rem}
+
+  /* ---------- IA rail ---------- */
+  .ia{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin-top:6px}
+  .ia .tab{border:1px solid var(--line);border-radius:14px;padding:18px;background:var(--panel);display:flex;flex-direction:column;gap:8px}
+  .ia .tab .ico{font-family:"Fraunces",serif;font-style:italic;color:var(--brass);font-size:1.5rem;line-height:1}
+  .ia .tab h4{font-size:1rem}
+  .ia .tab p{margin:0;font-size:.9rem;color:var(--ink-soft);line-height:1.45}
+
+  /* ---------- Feature blocks ---------- */
+  .feature{display:grid;grid-template-columns:1fr;gap:30px;align-items:start}
+  @media (min-width:840px){
+    .feature{grid-template-columns:1fr 1fr;gap:44px}
+    .feature.flip .copy{order:2}
+  }
+  .feature .copy h3{margin-bottom:14px}
+  .feature .copy .tagline{font-family:"Fraunces",serif;font-style:italic;color:var(--brass);font-size:1.1rem;margin-bottom:10px}
+  ul.ticks{list-style:none;padding:0;margin:16px 0 0;display:flex;flex-direction:column;gap:11px}
+  ul.ticks li{position:relative;padding-left:26px;font-size:.98rem;line-height:1.5;color:var(--ink-soft)}
+  ul.ticks li::before{content:"";position:absolute;left:4px;top:.62em;width:8px;height:8px;border-radius:2px;background:var(--brass);transform:rotate(45deg)}
+  ul.ticks li b{color:var(--ink);font-weight:500}
+
+  /* ---------- Device mock ---------- */
+  .mock{
+    background:var(--panel);border:1px solid var(--line);border-radius:20px;
+    box-shadow:var(--shadow);overflow:hidden;position:relative;
+  }
+  .mock .bar{display:flex;align-items:center;gap:7px;padding:12px 16px;border-bottom:1px solid var(--line-soft);background:color-mix(in srgb,var(--panel) 82%,var(--ink) 4%)}
+  .mock .bar i{width:10px;height:10px;border-radius:50%;background:var(--line);display:block}
+  .mock .bar .ttl{margin-left:8px;font-family:"JetBrains Mono",monospace;font-size:.7rem;letter-spacing:.08em;color:var(--ink-faint)}
+  .mock .body{padding:20px}
+  .mock .screen-eyebrow{font-family:"JetBrains Mono",monospace;font-size:.64rem;letter-spacing:.18em;text-transform:uppercase;color:var(--brass);display:block;margin-bottom:4px}
+  .mock h4.screen-h{font-size:1.3rem;margin-bottom:16px}
+
+  /* shelf mock */
+  .shelf{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+  .bk{aspect-ratio:2/3;border-radius:4px 6px 6px 4px;position:relative;overflow:hidden;box-shadow:2px 3px 8px -4px rgba(0,0,0,.5);border-left:3px solid rgba(0,0,0,.18);display:flex;align-items:flex-end}
+  .bk span{font-family:"Fraunces",serif;font-size:.56rem;line-height:1.1;color:#fff;padding:6px;font-weight:500;text-shadow:0 1px 2px rgba(0,0,0,.4)}
+  .bk.a{background:linear-gradient(155deg,#3a5245,#22302a)}
+  .bk.b{background:linear-gradient(155deg,#7c332c,#521f1b)}
+  .bk.c{background:linear-gradient(155deg,#a2751e,#6d4d10)}
+  .bk.d{background:linear-gradient(155deg,#2f4858,#1a2b36)}
+  .bk.e{background:linear-gradient(155deg,#5b4a72,#382a4a)}
+  .bk.f{background:linear-gradient(155deg,#8a5a34,#5b3820)}
+  .bk.g{background:linear-gradient(155deg,#356859,#1f3f35)}
+  .bk.h{background:linear-gradient(155deg,#94324b,#5f1f30)}
+  .status-row{display:flex;gap:6px;margin-top:16px;flex-wrap:wrap}
+  .pill{font-family:"JetBrains Mono",monospace;font-size:.62rem;letter-spacing:.06em;padding:4px 9px;border-radius:100px;border:1px solid var(--line);color:var(--ink-soft)}
+  .pill.on{background:var(--green);color:#EBE4D2;border-color:transparent}
+
+  /* progress / log */
+  .log-item{display:flex;gap:12px;align-items:center;padding:11px 0;border-bottom:1px solid var(--line-soft)}
+  .log-item:last-child{border-bottom:0}
+  .mini-cover{width:34px;height:50px;border-radius:3px;flex:none;box-shadow:2px 2px 6px -3px rgba(0,0,0,.5)}
+  .log-item .t{flex:1;min-width:0}
+  .log-item .t .n{font-size:.92rem;line-height:1.2;font-weight:500}
+  .log-item .t .a{font-size:.78rem;color:var(--ink-faint)}
+  .bar-track{height:5px;border-radius:100px;background:var(--line);overflow:hidden;margin-top:6px}
+  .bar-fill{height:100%;background:var(--brass);border-radius:100px}
+  .stars{color:var(--brass);font-size:.8rem;letter-spacing:1px;white-space:nowrap}
+
+  /* recs */
+  .rec{display:flex;gap:14px;padding:13px;border:1px solid var(--line);border-radius:12px;background:var(--paper);margin-bottom:10px}
+  .rec:last-child{margin-bottom:0}
+  .rec .why{font-size:.82rem;color:var(--ink-soft);line-height:1.4;margin-top:5px}
+  .rec .why b{color:var(--brass);font-weight:500}
+  .match{font-family:"JetBrains Mono",monospace;font-size:.7rem;color:var(--green);font-weight:600}
+  :root[data-theme="dark"] .match,:root:not([data-theme="light"]) .match{color:var(--brass-bright)}
+
+  /* trending ledger */
+  .ledger-tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:16px}
+  .ledger-tabs .g{font-family:"JetBrains Mono",monospace;font-size:.64rem;letter-spacing:.08em;text-transform:uppercase;padding:5px 11px;border-radius:100px;border:1px solid var(--line);color:var(--ink-faint)}
+  .ledger-tabs .g.sel{background:var(--brass);color:#1c1305;border-color:transparent}
+  .rank{display:flex;align-items:center;gap:13px;padding:10px 0;border-bottom:1px solid var(--line-soft)}
+  .rank:last-child{border-bottom:0}
+  .rank .no{font-family:"Fraunces",serif;font-size:1.5rem;color:var(--brass);width:1.4em;text-align:center;flex:none;font-variant-numeric:tabular-nums}
+  .rank .info{flex:1;min-width:0}
+  .rank .info .n{font-size:.94rem;font-weight:500;line-height:1.2}
+  .rank .info .a{font-size:.78rem;color:var(--ink-faint)}
+  .trend{font-family:"JetBrains Mono",monospace;font-size:.72rem;font-weight:600;white-space:nowrap}
+  .trend.up{color:#3f7d4f}
+  :root[data-theme="dark"] .trend.up,:root:not([data-theme="light"]) .trend.up{color:#7bbf88}
+  .trend.new{color:var(--oxblood)}
+
+  /* word of day */
+  .wotd{background:var(--green);color:#EDE7D5;border-radius:20px;padding:clamp(26px,5vw,44px);box-shadow:var(--shadow);position:relative;overflow:hidden}
+  .wotd::after{content:"“";position:absolute;right:-.05em;top:-.28em;font-family:"Fraunces",serif;font-size:16rem;line-height:1;color:rgba(207,160,68,.14)}
+  .wotd .date{font-family:"JetBrains Mono",monospace;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--brass-bright);margin-bottom:20px}
+  .wotd .word{font-family:"Fraunces",serif;font-size:clamp(2.4rem,7vw,3.6rem);line-height:1;letter-spacing:-.01em;position:relative;z-index:1}
+  .wotd .pron{font-family:"Newsreader",serif;font-style:italic;color:#c9c6b6;font-size:1.05rem;margin:8px 0 4px}
+  .wotd .pos{font-family:"JetBrains Mono",monospace;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--brass-bright)}
+  .wotd .def{font-size:1.14rem;line-height:1.5;margin:18px 0;max-width:46ch;position:relative;z-index:1}
+  .wotd .use{border-left:2px solid var(--brass);padding-left:16px;font-style:italic;color:#d6d3c3;font-size:1rem;max-width:48ch;position:relative;z-index:1}
+  .wotd .foot{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px;position:relative;z-index:1}
+  .wotd .foot .b{font-family:"JetBrains Mono",monospace;font-size:.64rem;letter-spacing:.08em;text-transform:uppercase;padding:5px 11px;border-radius:100px;border:1px solid rgba(207,160,68,.4);color:var(--brass-bright)}
+
+  /* stats view */
+  .goalring{display:flex;gap:18px;align-items:center;margin-bottom:16px}
+  .goalring svg{width:104px;height:104px;flex:none}
+  .goalring .rtext .big{font-family:"Fraunces",serif;font-size:1.9rem;line-height:1;font-variant-numeric:tabular-nums}
+  .goalring .rtext .big b{color:var(--brass);font-weight:500}
+  .goalring .rtext .sub{font-size:.88rem;color:var(--ink-soft);margin-top:3px}
+  .goalring .rtext .pace{font-family:"JetBrains Mono",monospace;font-size:.64rem;letter-spacing:.08em;text-transform:uppercase;color:#3f7d4f;margin-top:9px}
+  :root[data-theme="dark"] .goalring .rtext .pace,:root:not([data-theme="light"]) .goalring .rtext .pace{color:#7bbf88}
+  .tiles{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-bottom:20px}
+  .tile{border:1px solid var(--line);border-radius:10px;padding:11px 13px;background:var(--paper)}
+  .tile .v{font-family:"Fraunces",serif;font-size:1.45rem;line-height:1;font-variant-numeric:tabular-nums}
+  .tile .l{font-family:"JetBrains Mono",monospace;font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);margin-top:5px}
+  .chart .cap{font-family:"JetBrains Mono",monospace;font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:10px;display:flex;justify-content:space-between}
+  .bars{display:flex;align-items:flex-end;gap:6px;height:92px;border-bottom:1px solid var(--line)}
+  .barcol{flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;height:100%}
+  .barcol .bx{width:100%;max-width:20px;background:var(--brass);border-radius:4px 4px 0 0;opacity:.48}
+  .barcol.now .bx{opacity:1;background:var(--brass-bright)}
+  .barcol .mn{font-family:"JetBrains Mono",monospace;font-size:.54rem;color:var(--ink-faint);margin-top:6px;letter-spacing:.03em}
+  .barcol.now .mn{color:var(--brass)}
+
+  /* goodreads bridge steps */
+  .steps{counter-reset:s;display:flex;flex-direction:column;gap:2px;margin-top:4px}
+  .step{display:grid;grid-template-columns:auto 1fr;gap:18px;padding:18px 0;border-bottom:1px solid var(--line-soft)}
+  .step:last-child{border-bottom:0}
+  .step .n{counter-increment:s;font-family:"Fraunces",serif;font-size:1.5rem;color:var(--brass);width:1.8em;height:1.8em;border:1px solid var(--brass);border-radius:50%;display:grid;place-items:center;flex:none}
+  .step .n::before{content:counter(s)}
+  .step h4{margin-bottom:6px}
+  .step p{margin:0;color:var(--ink-soft);font-size:.96rem}
+  .note{background:var(--chip);border-radius:14px;padding:18px 20px;margin-top:24px;font-size:.95rem;line-height:1.55}
+  .note .label{font-family:"JetBrains Mono",monospace;font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--brass);display:block;margin-bottom:6px}
+
+  /* data model / stack */
+  .grid2{display:grid;grid-template-columns:1fr;gap:20px}
+  @media(min-width:760px){.grid2{grid-template-columns:1fr 1fr}}
+  .card{border:1px solid var(--line);border-radius:16px;padding:22px 24px;background:var(--panel)}
+  .card h4{margin-bottom:6px}
+  .schema{font-family:"JetBrains Mono",monospace;font-size:.78rem;line-height:1.7;color:var(--ink-soft);overflow-x:auto}
+  .schema .k{color:var(--brass)}
+  .schema .c{color:var(--ink-faint)}
+  .stacklist{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:12px}
+  .stacklist li{display:grid;grid-template-columns:130px 1fr;gap:14px;align-items:baseline;font-size:.94rem}
+  .stacklist .layer{font-family:"JetBrains Mono",monospace;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--brass)}
+  .stacklist .pick b{font-weight:500}
+  .stacklist .pick span{color:var(--ink-faint);font-size:.86rem}
+
+  /* prompt block */
+  .promptwrap{position:relative;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--paper-2)}
+  .promptwrap .head{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 16px;border-bottom:1px solid var(--line);background:var(--panel)}
+  .promptwrap .head .lbl{font-family:"JetBrains Mono",monospace;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft)}
+  #copyBtn{font-family:"JetBrains Mono",monospace;font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--brass);color:var(--brass);background:transparent;border-radius:100px;padding:6px 14px;cursor:pointer;transition:background .15s,color .15s}
+  #copyBtn:hover{background:var(--brass);color:var(--paper)}
+  #copyBtn:focus-visible{outline:2px solid var(--brass);outline-offset:2px}
+  pre.prompt{margin:0;padding:22px;overflow-x:auto;font-family:"JetBrains Mono",monospace;font-size:.82rem;line-height:1.7;color:var(--ink);white-space:pre-wrap;word-break:break-word;tab-size:2}
+
+  /* roadmap */
+  .phases{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+  .phase{border:1px solid var(--line);border-radius:16px;padding:22px;background:var(--panel)}
+  .phase .tag{font-family:"JetBrains Mono",monospace;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--brass);margin-bottom:10px}
+  .phase h4{margin-bottom:12px;font-size:1.15rem}
+  .phase ul{margin:0;padding-left:18px;color:var(--ink-soft);font-size:.92rem;line-height:1.55}
+  .phase ul li{margin-bottom:5px}
+
+  footer{padding-block:56px 72px;border-top:1px solid var(--line-soft);color:var(--ink-faint);font-family:"JetBrains Mono",monospace;font-size:.74rem;letter-spacing:.05em;line-height:1.9}
+
+  a.focusable:focus-visible{outline:2px solid var(--brass);outline-offset:3px;border-radius:4px}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<header class="mast wrap">
+  <div class="kicker">
+    <span class="seal">L</span>
+    <span class="eyebrow">Design &amp; Build Brief · v1</span>
+  </div>
+  <div class="wordmark">Litera<span class="i-dot">r</span>y</div>
+  <div class="tag">A quiet, beautiful home for the books you mean to read.</div>
+  <div class="colophon">
+    <span><b>For:</b> Replit build</span>
+    <span><b>Type:</b> Reading tracker &amp; discovery</span>
+    <span><b>Feel:</b> Minimal · literary · warm</span>
+    <span><b>Tabs:</b> Shelf · Discover · Trending · Word · Stats</span>
+    <span><b>Settings:</b> Goodreads import</span>
+  </div>
+</header>
+
+<nav class="toc" aria-label="Sections">
+  <div class="wrap">
+    <a class="focusable" href="#idea">The Idea</a>
+    <a class="focusable" href="#language">Design Language</a>
+    <a class="focusable" href="#architecture">Architecture</a>
+    <a class="focusable" href="#shelf">The Shelf</a>
+    <a class="focusable" href="#discover">Discover</a>
+    <a class="focusable" href="#trending">Trending</a>
+    <a class="focusable" href="#word">Word of the Day</a>
+    <a class="focusable" href="#stats">Stats &amp; Goals</a>
+    <a class="focusable" href="#import">Goodreads Import</a>
+    <a class="focusable" href="#data">Data &amp; Stack</a>
+    <a class="focusable" href="#prompt">Replit Prompt</a>
+  </div>
+</nav>
+
+<main>
+
+  <!-- IDEA -->
+  <section id="idea">
+    <div class="wrap col">
+      <div class="eyebrow">01 — The idea</div>
+      <h2 style="margin:14px 0 22px">What Literary is</h2>
+      <p class="lead">Literary is a calm, personal reading companion — part shelf, part diary, part librarian. It lets you log what you're reading beautifully, tells you what to read next in your own taste, shows you what the world is reading right now, and teaches you a lovely word each day.</p>
+      <p>It is deliberately <strong>simple and minimalist</strong>. No noisy social feed, no gamified streak-shaming, no clutter. The whole app should feel like a well-bound notebook: generous white space, warm paper tones, a single confident accent, and typography that makes you want to linger. Every screen answers one question and answers it clearly.</p>
+      <p>The people it is for are readers who keep mental lists — the ones with a stack of "someday" books on the nightstand. Literary turns that pile into something you actually enjoy tending.</p>
+    </div>
+  </section>
+
+  <!-- DESIGN LANGUAGE -->
+  <section id="language">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-no">02</div>
+        <div class="txt">
+          <h2>Design language</h2>
+          <p>The look is "modern bookbinding": bottle-green ink, warm parchment, and aged brass. Give this palette and these fonts to Replit verbatim so the build starts from the right feeling.</p>
+        </div>
+      </div>
+
+      <div class="swatches">
+        <div class="sw"><div class="chip" style="background:#EEE9DB"></div><div class="meta"><div class="nm">Parchment</div><div class="hx">#EEE9DB · ground</div></div></div>
+        <div class="sw"><div class="chip" style="background:#182420"></div><div class="meta"><div class="nm">Ink Green</div><div class="hx">#182420 · text</div></div></div>
+        <div class="sw"><div class="chip" style="background:#293C32"></div><div class="meta"><div class="nm">Bottle</div><div class="hx">#293C32 · surface</div></div></div>
+        <div class="sw"><div class="chip" style="background:#A2751E"></div><div class="meta"><div class="nm">Brass</div><div class="hx">#A2751E · accent</div></div></div>
+        <div class="sw"><div class="chip" style="background:#7C332C"></div><div class="meta"><div class="nm">Oxblood</div><div class="hx">#7C332C · rare pop</div></div></div>
+      </div>
+
+      <div class="typo-grid">
+        <div class="typo">
+          <div class="role">Display — Fraunces</div>
+          <div class="sample-fr">Between the pages</div>
+          <div class="spec">Titles, wordmark, big numbers. Weight 400–500, tight tracking.</div>
+        </div>
+        <div class="typo">
+          <div class="role">Reading — Newsreader</div>
+          <div class="sample-nr">Book notes, blurbs, and the words you save for later.</div>
+          <div class="spec">Body copy &amp; long text. An editorial serif built for screens.</div>
+        </div>
+        <div class="typo">
+          <div class="role">Utility — JetBrains Mono</div>
+          <div class="sample-jb">STATUS · 2026 · ★★★★☆</div>
+          <div class="spec">Labels, metadata, dates, tags. Uppercase, wide tracking.</div>
+        </div>
+      </div>
+
+      <div class="note">
+        <span class="label">Tone of voice</span>
+        Warm, literate, unhurried — like a favourite bookseller, never a growth-hacking app. Buttons say what they do: <em>Add to shelf</em>, <em>Mark as read</em>, <em>Save this word</em>. Empty states are invitations, not error screens ("Your shelf is waiting for its first spine").
+      </div>
+    </div>
+  </section>
+
+  <!-- ARCHITECTURE -->
+  <section id="architecture">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-no">03</div>
+        <div class="txt">
+          <h2>Information architecture</h2>
+          <p>Five tabs in a slim bottom bar (mobile) or left rail (desktop). Word of the Day and Stats each get their own tab so they feel like rituals, not widgets. Goodreads import is a one-time action, so it lives in Settings rather than taking a permanent tab.</p>
+        </div>
+      </div>
+      <div class="ia">
+        <div class="tab"><span class="ico">❧</span><h4>Shelf</h4><p>Your library. Log, sort, and see reading in progress.</p></div>
+        <div class="tab"><span class="ico">✦</span><h4>Discover</h4><p>Recommendations tuned to your own taste and history.</p></div>
+        <div class="tab"><span class="ico">↑</span><h4>Trending</h4><p>Top reads right now — overall and by genre.</p></div>
+        <div class="tab"><span class="ico">A</span><h4>Word</h4><p>A beautiful literary word every day, saved to your journal.</p></div>
+        <div class="tab"><span class="ico">◔</span><h4>Stats</h4><p>Your reading goal, streaks, and year in books.</p></div>
+        <div class="tab" style="border-style:dashed"><span class="ico">⚙</span><h4>Settings</h4><p>Profile, reading goal — and the one-time Goodreads import.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SHELF -->
+  <section id="shelf">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-no">04</div>
+        <div class="txt"><h2>The Shelf</h2><p>The heart of the app — logging and tracking, made to feel like arranging real books.</p></div>
+      </div>
+      <div class="feature">
+        <div class="copy">
+          <div class="tagline">Tend your pile.</div>
+          <h3>Log a book in seconds, then watch your shelf fill</h3>
+          <p>Search a title, tap it, and it lands on a shelf as a real-looking spine with cover art. Every book carries a <strong>status</strong> — <em>Want to read</em>, <em>Reading</em>, <em>Finished</em>, or <em>Set aside</em> — plus your rating, private notes, favourite quotes, and the dates you started and finished.</p>
+          <ul class="ticks">
+            <li><b>Three ways to view:</b> a visual bookshelf, a tidy list, or a reading timeline by month.</li>
+            <li><b>Progress tracking:</b> log current page or percent; a thin brass bar shows how far you are.</li>
+            <li><b>Quotes &amp; notes:</b> keep the lines worth remembering right on the book's page.</li>
+            <li><b>Gentle stats:</b> books this year, pages read, genres explored — shown quietly, never as pressure.</li>
+            <li><b>Book detail page:</b> cover, synopsis, your rating, notes, and "readers who liked this also read…".</li>
+          </ul>
+        </div>
+        <div class="mock" aria-hidden="true">
+          <div class="bar"><i></i><i></i><i></i><span class="ttl">literary / shelf</span></div>
+          <div class="body">
+            <span class="screen-eyebrow">Currently reading · 3</span>
+            <h4 class="screen-h">My Shelf</h4>
+            <div class="shelf">
+              <div class="bk a"><span>Piranesi</span></div>
+              <div class="bk b"><span>Circe</span></div>
+              <div class="bk c"><span>The Overstory</span></div>
+              <div class="bk d"><span>Pachinko</span></div>
+              <div class="bk e"><span>Cloud Atlas</span></div>
+              <div class="bk f"><span>Klara &amp; the Sun</span></div>
+              <div class="bk g"><span>The Bee Sting</span></div>
+              <div class="bk h"><span>Tomorrow ×3</span></div>
+            </div>
+            <div class="status-row">
+              <span class="pill on">Reading · 3</span>
+              <span class="pill">Want · 24</span>
+              <span class="pill">Finished · 61</span>
+            </div>
+            <div style="margin-top:16px">
+              <div class="log-item">
+                <div class="mini-cover" style="background:linear-gradient(155deg,#3a5245,#22302a)"></div>
+                <div class="t"><div class="n">Piranesi</div><div class="a">Susanna Clarke</div><div class="bar-track"><div class="bar-fill" style="width:64%"></div></div></div>
+                <div class="pill" style="border:0">p.148</div>
+              </div>
+              <div class="log-item">
+                <div class="mini-cover" style="background:linear-gradient(155deg,#7c332c,#521f1b)"></div>
+                <div class="t"><div class="n">Circe</div><div class="a">Madeline Miller</div><div class="bar-track"><div class="bar-fill" style="width:31%"></div></div></div>
+                <div class="pill" style="border:0">31%</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DISCOVER -->
+  <section id="discover">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-no">05</div>
+        <div class="txt"><h2>Discover</h2><p>Recommendations that actually sound like you — and explain themselves.</p></div>
+      </div>
+      <div class="feature flip">
+        <div class="copy">
+          <div class="tagline">A librarian who knows your taste.</div>
+          <h3>Customized picks, with a reason attached</h3>
+          <p>Discover reads your history — the genres, authors, moods and ratings on your shelf — and suggests what to read next. Crucially, <strong>every recommendation says why</strong>, so it feels like advice from someone who's paying attention, not a black box.</p>
+          <ul class="ticks">
+            <li><b>Taste profile:</b> built quietly from your ratings, favourite authors, and most-read genres.</li>
+            <li><b>"Because you loved…":</b> each pick names the book or trait it's based on.</li>
+            <li><b>Mood shelves:</b> curated rows like <em>Cozy &amp; slow</em>, <em>Big ideas</em>, <em>One-sitting reads</em>, <em>Comfort re-reads</em>.</li>
+            <li><b>Feedback loop:</b> thumbs, "not for me", and "save for later" refine future picks.</li>
+            <li><b>Discover a genre:</b> gentle on-ramps into corners you haven't explored yet.</li>
+          </ul>
+          <div class="note" style="margin-top:22px">
+            <span class="label">How the engine works (MVP)</span>
+            Start simple and reliable: score candidate books by overlap of genre, author, and "readers-also-liked" signals against your shelf, weighted by your ratings. Later, layer an optional AI pass (an LLM given your top-rated books) to write the one-line "why" and surface less obvious matches.
+          </div>
+        </div>
+        <div class="mock" aria-hidden="true">
+          <div class="bar"><i></i><i></i><i></i><span class="ttl">literary / discover</span></div>
+          <div class="body">
+            <span class="screen-eyebrow">Chosen for you · today</span>
+            <h4 class="screen-h">Because you loved <em>Piranesi</em></h4>
+            <div class="rec">
+              <div class="mini-cover" style="width:44px;height:64px;background:linear-gradient(155deg,#2f4858,#1a2b36)"></div>
+              <div style="flex:1;min-width:0">
+                <div style="display:flex;justify-content:space-between;gap:8px;align-items:baseline"><div class="n" style="font-weight:500">The Starless Sea</div><span class="match">96% you</span></div>
+                <div class="a" style="font-size:.78rem;color:var(--ink-faint)">Erin Morgenstern</div>
+                <div class="why">Same <b>quiet, labyrinthine wonder</b> — dreamlike architecture and a hushed narrator.</div>
+              </div>
+            </div>
+            <div class="rec">
+              <div class="mini-cover" style="width:44px;height:64px;background:linear-gradient(155deg,#5b4a72,#382a4a)"></div>
+              <div style="flex:1;min-width:0">
+                <div style="display:flex;justify-content:space-between;gap:8px;align-items:baseline"><div class="n" style="font-weight:500">Jonathan Strange &amp; Mr Norrell</div><span class="match">91% you</span></div>
+                <div class="a" style="font-size:.78rem;color:var(--ink-faint)">Susanna Clarke</div>
+                <div class="why">By <b>the same author</b>, and you rated her ★★★★★.</div>
+              </div>
+            </div>
+            <div class="rec">
+              <div class="mini-cover" style="width:44px;height:64px;background:linear-gradient(155deg,#356859,#1f3f35)"></div>
+              <div style="flex:1;min-width:0">
+                <div style="display:flex;justify-content:space-between;gap:8px;align-items:baseline"><div class="n" style="font-weight:500">The Buried Giant</div><span class="match">88% you</span></div>
+                <div class="a" style="font-size:.78rem;color:var(--ink-faint)">Kazuo Ishiguro</div>
+                <div class="why">You keep returning to <b>literary fantasy with a soft, sad heart</b>.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRENDING -->
+  <section id="trending">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-no">06</div>
+        <div class="txt"><h2>Trending — "The Ledger"</h2><p>Your page of top reads: what's rising overall, and the leaders inside each genre, drawn from recent articles and buzz.</p></div>
+      </div>
+      <div class="feature">
+        <div class="copy">
+          <div class="tagline">What the world is reading.</div>
+          <h3>Top reads, overall and by genre</h3>
+          <p>The Ledger is the "pager" you described — a browsable board of trending books. A genre switcher runs across the top (All, Literary, Fantasy, Romance, Mystery, Non-fiction, and more), and each view lists the current top titles with a small movement indicator, so you can see what's climbing.</p>
+          <ul class="ticks">
+            <li><b>Overall &amp; per-genre boards:</b> one tap swaps the whole ranked list.</li>
+            <li><b>Sourced from the moment:</b> recent book news, reviews, and bestseller signals — each entry links to why it's trending.</li>
+            <li><b>Movement markers:</b> ▲ rising, ● steady, <em>NEW</em> just entered.</li>
+            <li><b>One-tap to shelf:</b> add any trending book straight to <em>Want to read</em>.</li>
+            <li><b>Weekly "Notable" rail:</b> a small editorial strip of new releases and prize news.</li>
+          </ul>
+          <div class="note" style="margin-top:22px">
+            <span class="label">Where the data comes from</span>
+            For a reliable MVP, aggregate from an open source you can query on a schedule — e.g. a books API for popularity/new-release signals plus a news/RSS feed of book coverage — cache it daily, and rank. Present it honestly as "trending this week", refreshed on a cron.
+          </div>
+        </div>
+        <div class="mock" aria-hidden="true">
+          <div class="bar"><i></i><i></i><i></i><span class="ttl">literary / trending</span></div>
+          <div class="body">
+            <span class="screen-eyebrow">Updated today · this week</span>
+            <h4 class="screen-h">The Ledger</h4>
+            <div class="ledger-tabs">
+              <span class="g sel">All</span><span class="g">Literary</span><span class="g">Fantasy</span><span class="g">Mystery</span><span class="g">Non-fic</span>
+            </div>
+            <div class="rank"><div class="no">1</div><div class="info"><div class="n">James</div><div class="a">Percival Everett</div></div><div class="trend up">▲ 4</div></div>
+            <div class="rank"><div class="no">2</div><div class="info"><div class="n">The Ministry of Time</div><div class="a">Kaliane Bradley</div></div><div class="trend up">▲ 1</div></div>
+            <div class="rank"><div class="no">3</div><div class="info"><div class="n">Intermezzo</div><div class="a">Sally Rooney</div></div><div class="trend new">NEW</div></div>
+            <div class="rank"><div class="no">4</div><div class="info"><div class="n">The God of the Woods</div><div class="a">Liz Moore</div></div><div class="trend up">▲ 2</div></div>
+            <div class="rank"><div class="no">5</div><div class="info"><div class="n">All Fours</div><div class="a">Miranda July</div></div><div class="trend" style="color:var(--ink-faint)">● —</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORD OF THE DAY -->
+  <section id="word">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-no">07</div>
+        <div class="txt"><h2>Word of the Day</h2><p>Its own tab — a small daily ritual that fits a reader, styled to match everything else.</p></div>
+      </div>
+      <div class="wotd" role="group" aria-label="Word of the day example">
+        <div class="date">Sunday · 14 September</div>
+        <div class="word">Tsundoku</div>
+        <div class="pron">/tsoon-<span style="font-style:normal">doh</span>-koo/</div>
+        <div class="pos">noun · from Japanese</div>
+        <p class="def">The habit of acquiring books and letting them pile up, unread, in a comforting, ever-growing stack.</p>
+        <div class="use">"Her nightstand was a monument to tsundoku — a leaning tower of good intentions she loved all the same."</div>
+        <div class="foot">
+          <span class="b">✶ Save to journal</span>
+          <span class="b">↔ See yesterday</span>
+          <span class="b">◷ Word history</span>
+        </div>
+      </div>
+      <div class="feature" style="margin-top:34px">
+        <div class="copy">
+          <h3>Cohesive with the rest of the app</h3>
+          <p>The word lives on the same parchment, uses the same Fraunces display and brass accent, and leans into <strong>bookish, literary vocabulary</strong> — words about reading, language, and feeling (<em>petrichor, sonder, librocubicularist, bibliosmia</em>) rather than generic dictionary fare.</p>
+        </div>
+        <div class="copy">
+          <ul class="ticks" style="margin-top:0">
+            <li><b>One word a day,</b> with pronunciation, part of speech, origin, definition, and a hand-written example sentence.</li>
+            <li><b>Save to your Word Journal</b> — a growing personal collection you can revisit.</li>
+            <li><b>Streak, gently:</b> a quiet count of words collected, never a nag.</li>
+            <li><b>Optional daily nudge</b> so it becomes a small morning habit.</li>
+            <li><b>Curated list + fallback:</b> ship a hand-picked word bank; optionally enrich definitions from a dictionary API.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section id="stats">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-no">08</div>
+        <div class="txt"><h2>Stats &amp; Goals</h2><p>A yearly reading goal and a quiet picture of your year in books — celebratory, never a guilt trip.</p></div>
+      </div>
+      <div class="feature flip">
+        <div class="copy">
+          <div class="tagline">Your year in reading.</div>
+          <h3>Set a goal, then watch the year fill in</h3>
+          <p>Pick a target for the year and Literary tracks it with a soft progress ring and a gentle "on track" pace — no red streak-shaming, no pressure. Below it, a calm dashboard shows the shape of your reading: how much, how often, and what you gravitate toward.</p>
+          <ul class="ticks">
+            <li><b>Reading goal:</b> a yearly target with a progress ring and pace ("3 books ahead").</li>
+            <li><b>Stat tiles:</b> books this year, pages read, average rating, current streak.</li>
+            <li><b>Books per month</b> and a <b>by-genre breakdown</b> of what you actually read.</li>
+            <li><b>Year in review:</b> a shareable end-of-year card — favourites, totals, top genre.</li>
+            <li><b>Tone stays kind:</b> milestones are celebrated; a slow month is never scolded.</li>
+          </ul>
+        </div>
+        <div class="mock" aria-hidden="true">
+          <div class="bar"><i></i><i></i><i></i><span class="ttl">literary / stats</span></div>
+          <div class="body">
+            <span class="screen-eyebrow">2026 · reading year</span>
+            <h4 class="screen-h">Stats &amp; Goals</h4>
+            <div class="goalring">
+              <svg viewBox="0 0 104 104" role="img" aria-label="52 of 60 books read, 87 percent of goal">
+                <circle cx="52" cy="52" r="45" fill="none" stroke="var(--line)" stroke-width="9"></circle>
+                <circle cx="52" cy="52" r="45" fill="none" stroke="var(--brass)" stroke-width="9" stroke-linecap="round" stroke-dasharray="245 283" transform="rotate(-90 52 52)"></circle>
+                <text x="52" y="49" text-anchor="middle" font-family="Fraunces,serif" font-size="18" fill="var(--ink)" style="font-variant-numeric:tabular-nums">87%</text>
+                <text x="52" y="65" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="6.5" letter-spacing="1" fill="var(--ink-faint)">OF GOAL</text>
+              </svg>
+              <div class="rtext">
+                <div class="big"><b>52</b> / 60 books</div>
+                <div class="sub">8 to go this year</div>
+                <div class="pace">▲ On track · 3 ahead</div>
+              </div>
+            </div>
+            <div class="tiles">
+              <div class="tile"><div class="v">17,340</div><div class="l">Pages read</div></div>
+              <div class="tile"><div class="v">★ 4.1</div><div class="l">Avg rating</div></div>
+              <div class="tile"><div class="v">9 days</div><div class="l">Current streak</div></div>
+              <div class="tile"><div class="v">Literary</div><div class="l">Top genre</div></div>
+            </div>
+            <div class="chart">
+              <div class="cap"><span>Books per month</span><span>2026</span></div>
+              <div class="bars">
+                <div class="barcol"><div class="bx" style="height:62%"></div><div class="mn">J</div></div>
+                <div class="barcol"><div class="bx" style="height:50%"></div><div class="mn">F</div></div>
+                <div class="barcol"><div class="bx" style="height:88%"></div><div class="mn">M</div></div>
+                <div class="barcol"><div class="bx" style="height:75%"></div><div class="mn">A</div></div>
+                <div class="barcol"><div class="bx" style="height:100%"></div><div class="mn">M</div></div>
+                <div class="barcol"><div class="bx" style="height:62%"></div><div class="mn">J</div></div>
+                <div class="barcol"><div class="bx" style="height:88%"></div><div class="mn">J</div></div>
+                <div class="barcol"><div class="bx" style="height:75%"></div><div class="mn">A</div></div>
+                <div class="barcol now"><div class="bx" style="height:50%"></div><div class="mn">S</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GOODREADS IMPORT -->
+  <section id="import">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-no">09</div>
+        <div class="txt"><h2>Goodreads Import — "The Bridge"</h2><p>Bring years of reading history across so Literary feels full on day one. It lives in Settings — a one-time action, not a permanent tab.</p></div>
+      </div>
+
+      <div class="note" style="margin-top:0;margin-bottom:26px">
+        <span class="label">An honest technical note — read this first</span>
+        Goodreads <strong>retired its public API to new developers in December 2020</strong>, so a live, real-time Goodreads connection isn't possible to build reliably today. The dependable path — and what nearly every reading app now uses — is Goodreads' own <strong>"Export Library" CSV</strong>, which every user can download from their account. Design "The Bridge" around that. You can frame it to users as connecting their Goodreads; under the hood it's a clean CSV import.
+      </div>
+
+      <div class="feature">
+        <div class="copy">
+          <div class="tagline">Ten years of reading, in one file.</div>
+          <h3>How the Bridge works</h3>
+          <div class="steps">
+            <div class="step"><div class="n"></div><div><h4>Export from Goodreads</h4><p>Guide the user: <em>My Books → Import/Export → Export Library</em>. Goodreads emails/serves a CSV.</p></div></div>
+            <div class="step"><div class="n"></div><div><h4>Drop it into Literary</h4><p>A friendly upload zone parses the CSV (title, author, ISBN, your rating, shelves, dates read, review).</p></div></div>
+            <div class="step"><div class="n"></div><div><h4>Map &amp; enrich</h4><p>Match Goodreads shelves to Literary statuses; fetch cover art and synopses by ISBN so everything looks right.</p></div></div>
+            <div class="step"><div class="n"></div><div><h4>Review &amp; confirm</h4><p>Show a preview — "312 books, 41 with ratings" — let them deselect any, then import. Ratings, reviews and dates carry over.</p></div></div>
+          </div>
+        </div>
+        <div class="copy">
+          <div class="mock" aria-hidden="true">
+            <div class="bar"><i></i><i></i><i></i><span class="ttl">literary / settings · import</span></div>
+            <div class="body">
+              <span class="screen-eyebrow">Goodreads bridge</span>
+              <h4 class="screen-h">Ready to import</h4>
+              <div style="border:1.5px dashed var(--line);border-radius:12px;padding:22px;text-align:center;background:var(--paper)">
+                <div style="font-family:'Fraunces',serif;font-size:1.6rem;color:var(--brass)">⇪</div>
+                <div style="font-family:'JetBrains Mono',monospace;font-size:.78rem;color:var(--ink-soft);margin-top:6px">goodreads_library_export.csv</div>
+                <div style="font-size:.8rem;color:var(--ink-faint);margin-top:2px">1.2 MB · parsed</div>
+              </div>
+              <div class="status-row" style="margin-top:18px">
+                <span class="pill on">312 books</span>
+                <span class="pill">41 rated</span>
+                <span class="pill">88 reviews</span>
+              </div>
+              <div class="log-item" style="margin-top:14px">
+                <div class="mini-cover" style="background:linear-gradient(155deg,#94324b,#5f1f30)"></div>
+                <div class="t"><div class="n">Read → Finished</div><div class="a">208 books mapped</div></div>
+                <div class="stars">★★★★☆</div>
+              </div>
+              <div class="log-item">
+                <div class="mini-cover" style="background:linear-gradient(155deg,#a2751e,#6d4d10)"></div>
+                <div class="t"><div class="n">To-read → Want to read</div><div class="a">96 books mapped</div></div>
+              </div>
+              <div style="margin-top:16px;text-align:center"><span class="pill on" style="padding:9px 22px">Import 312 books</span></div>
+            </div>
+          </div>
+          <div class="note">
+            <span class="label">If you want a true "MCP" later</span>
+            An <strong>MCP server</strong> (Model Context Protocol) could let an AI assistant read/write your Literary shelf directly — great for "add this to my want-to-read" by voice. Build it as a thin layer over Literary's <em>own</em> API once the app exists. Treat the Goodreads side as CSV-in; treat MCP as an assistant bridge <em>into</em> Literary, not out of Goodreads.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DATA + STACK -->
+  <section id="data">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-no">10</div>
+        <div class="txt"><h2>Data model &amp; stack</h2><p>A small, sane schema and a stack that runs cleanly on Replit.</p></div>
+      </div>
+      <div class="grid2">
+        <div class="card">
+          <h4>Core tables</h4>
+          <div class="schema">
+<span class="c">// the essentials</span>
+<span class="k">User</span> { id, name, email, taste_profile }
+<span class="k">Book</span> { id, title, author, isbn,
+  cover_url, synopsis, genres[], year }
+<span class="k">ShelfEntry</span> { id, user_id, book_id,
+  status, rating, progress,
+  started_at, finished_at }
+<span class="k">Note</span> { id, entry_id, kind, body }
+  <span class="c">// note | quote | review</span>
+<span class="k">ReadingGoal</span> { id, user_id, year,
+  target, progress }
+<span class="k">WordOfDay</span> { id, date, word, ipa,
+  part_of_speech, origin, definition,
+  example }
+<span class="k">SavedWord</span> { id, user_id, word_id }
+<span class="k">TrendingItem</span> { id, book_id, genre,
+  rank, movement, source_url, week }
+          </div>
+        </div>
+        <div class="card">
+          <h4>Suggested stack for Replit</h4>
+          <ul class="stacklist">
+            <li><span class="layer">Front</span><span class="pick"><b>React + Vite</b> <span>· Tailwind for the tokens above</span></span></li>
+            <li><span class="layer">Back</span><span class="pick"><b>Node + Express</b> <span>· or Replit's built-in app template</span></span></li>
+            <li><span class="layer">Data</span><span class="pick"><b>Postgres</b> <span>· Replit DB or Neon; Prisma ORM</span></span></li>
+            <li><span class="layer">Auth</span><span class="pick"><b>Replit Auth</b> <span>· or email magic-link</span></span></li>
+            <li><span class="layer">Books</span><span class="pick"><b>Open Library / Google Books API</b> <span>· covers, search, ISBN lookup</span></span></li>
+            <li><span class="layer">Words</span><span class="pick"><b>Curated JSON bank</b> <span>· + optional dictionary API</span></span></li>
+            <li><span class="layer">Jobs</span><span class="pick"><b>Daily cron</b> <span>· rotate word, refresh trending</span></span></li>
+            <li><span class="layer">AI</span><span class="pick"><b>Optional LLM</b> <span>· rec "why" lines &amp; taste summary</span></span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROMPT -->
+  <section id="prompt">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-no">11</div>
+        <div class="txt"><h2>Paste this into Replit</h2><p>A single, self-contained build prompt that carries the concept, aesthetic, and features. Copy it straight into Replit's AI agent to scaffold Literary.</p></div>
+      </div>
+      <div class="promptwrap">
+        <div class="head"><span class="lbl">replit_build_prompt.txt</span><button id="copyBtn" type="button">Copy</button></div>
+        <pre class="prompt" id="promptText">Build "Literary" — an aesthetic, minimalist reading tracker + book-discovery web app.
+
+DESIGN
+- Feeling: calm, literary, "modern bookbinding"; generous whitespace, one accent. Include a dark mode.
+- Palette: parchment #EEE9DB ground, ink-green #182420 text, bottle-green #293C32 surfaces, brass #A2751E accent, oxblood #7C332C rare pop. Dark mode: deep green-black ground, warm ivory text, brighter brass.
+- Fonts (Google): Fraunces (headings/wordmark), Newsreader (body), JetBrains Mono (labels/metadata).
+- Voice: warm and unhurried. Buttons say what they do. Empty states are gentle invitations.
+
+NAV — 5 tabs (bottom bar on mobile / left rail on desktop): Shelf, Discover, Trending, Word, Stats. Goodreads import is a one-time action, so put it in Settings, not a tab.
+
+FEATURES
+1. SHELF (core): search + add books (covers/synopsis via Open Library or Google Books API). Per book: status (Want to read / Reading / Finished / Set aside), star rating, progress (page or %), private notes, saved quotes, start/finish dates. Views: bookshelf, list, monthly timeline. Book detail page with notes + "readers also liked".
+2. DISCOVER: personalized recs from the user's shelf (genres/authors/ratings). Every rec shows a one-line reason ("Because you loved X", "Same author"). Mood shelves (Cozy & slow, Big ideas, One-sitting reads). Thumbs feedback refines picks. Scoring: genre/author/"also-liked" overlap weighted by ratings; optional LLM to write the "why".
+3. TRENDING ("The Ledger"): ranked board of top books with a genre switcher (All, Literary, Fantasy, Romance, Mystery, Non-fiction…). Each entry shows movement (▲/●/NEW) + source link; one tap adds to Want-to-read. Refresh daily via cron from a books API + book-news feed; label "trending this week".
+4. WORD (own tab, same styling): one literary/bookish word daily — word, IPA, part of speech, origin, definition, example sentence (e.g. tsundoku, petrichor, bibliosmia). "Save to journal" builds a Word Journal; gentle streak. Rotate from a curated JSON word bank via daily cron.
+5. STATS & GOALS: yearly reading goal with a soft progress ring + "on track" pace. Stat tiles (books this year, pages, avg rating, current streak). Books-per-month chart + by-genre breakdown. Shareable year-in-review card. Celebratory, never punishing.
+6. IMPORT ("The Bridge") — in Settings: Goodreads history import. NOTE: Goodreads closed its public API in 2020 — use their CSV export. Flow: user exports library (My Books → Import/Export → Export Library) → upload CSV → parse (title, author, ISBN, rating, shelves, dates, review) → map shelves to statuses → enrich covers by ISBN → preview count → confirm. Carry over ratings, reviews, dates.
+
+DATA: User, Book, ShelfEntry(status,rating,progress,dates), Note(note|quote|review), ReadingGoal(year,target,progress), WordOfDay, SavedWord, TrendingItem(genre,rank,movement,source,week).
+
+STACK: React+Vite+Tailwind (map palette/fonts to theme tokens), Node/Express, Postgres+Prisma, Replit Auth, Open Library/Google Books, daily cron (word + trending). Build Shelf + Word first (MVP), then Stats, Discover, Trending, Import. Keep the aesthetic consistent and responsive across every screen.</pre>
+      </div>
+
+      <h3 style="margin:44px 0 18px">Build it in this order</h3>
+      <div class="phases">
+        <div class="phase"><div class="tag">Phase 1 · MVP</div><h4>The essentials</h4><ul><li>Auth + Shelf (add, status, rating, progress)</li><li>Book search &amp; covers</li><li>Word of the Day + journal</li><li>Core design system</li></ul></div>
+        <div class="phase"><div class="tag">Phase 2</div><h4>Taste &amp; import</h4><ul><li>Discover recommendations with reasons</li><li>Stats &amp; Goals view</li><li>Goodreads CSV Bridge</li><li>Notes, quotes, book detail pages</li></ul></div>
+        <div class="phase"><div class="tag">Phase 3</div><h4>The wider world</h4><ul><li>Trending Ledger + genre boards</li><li>Daily cron jobs</li><li>Optional AI "why" lines</li><li>Optional MCP assistant bridge</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    LITERARY · design &amp; build brief · v1<br>
+    Parchment #EEE9DB — Ink #182420 — Brass #A2751E · Fraunces / Newsreader / JetBrains Mono<br>
+    Built to be plugged into Replit. Start with the Shelf.
+  </div>
+</footer>
+
+<script>
+  (function(){
+    var btn = document.getElementById('copyBtn');
+    var pre = document.getElementById('promptText');
+    if(!btn || !pre) return;
+    btn.addEventListener('click', function(){
+      var text = pre.innerText;
+      var done = function(){ btn.textContent = 'Copied ✓'; setTimeout(function(){ btn.textContent = 'Copy'; }, 1800); };
+      var fail = function(){ btn.textContent = 'Select all ↑'; setTimeout(function(){ btn.textContent = 'Copy'; }, 1800); };
+      try {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(text).then(done, fail);
+        } else {
+          var r = document.createRange(); r.selectNodeContents(pre);
+          var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+          document.execCommand('copy'); done();
+        }
+      } catch(e){ fail(); }
+    });
+  })();
+</script>
+
+</body>
+</html>
